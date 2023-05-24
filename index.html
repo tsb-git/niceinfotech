@@ -244,6 +244,243 @@ for DOE Exam</p>
 
         </div>
         <!-- Visit Our Tailor End -->
+		<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+@import url(https://fonts.googleapis.com/css?family=PT+Sans+Narrow);
+body {
+  font-family: Open Sans, "Helvetica Neue", "Helvetica", Helvetica, Arial,   sans-serif;
+  font-size: 13px;
+  color: #666;
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, th, td {
+  margin: 0;
+  padding: 0;
+  direction: ltr;
+}
+
+.sectionClass {
+  padding: 20px 0px 50px 0px;
+  position: relative;
+  display: block;
+}
+
+.fullWidth {
+  width: 100% !important;
+  display: table;
+  float: none;
+  padding: 0;
+  min-height: 1px;
+  height: 100%;
+  position: relative;
+}
+
+
+.sectiontitle {
+  background-position: center;
+  margin: 30px 0 0px;
+  text-align: center;
+  min-height: 20px;
+}
+
+.sectiontitle h2 {
+  font-size: 30px;
+  color: #222;
+  margin-bottom: 0px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+
+.headerLine {
+  width: 160px;
+  height: 2px;
+  display: inline-block;
+  background: #101F2E;
+}
+
+
+.projectFactsWrap{
+    display: flex;
+  margin-top: 30px;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+
+#projectFacts .fullWidth{
+  padding: 0;
+}
+
+.projectFactsWrap .item{
+  width: 25%;
+  height: 100%;
+  padding: 50px 0px;
+  text-align: center;
+}
+
+.projectFactsWrap .item:nth-child(1){
+  background: rgb(16, 31, 46);
+}
+
+.projectFactsWrap .item:nth-child(2){
+  background: rgb(18, 34, 51);
+}
+
+.projectFactsWrap .item:nth-child(3){
+  background: rgb(21, 38, 56);
+}
+
+.projectFactsWrap .item:nth-child(4){
+  background: rgb(23, 44, 66);
+}
+
+.projectFactsWrap .item p.number{
+  font-size: 40px;
+  padding: 0;
+  font-weight: bold;
+}
+
+.projectFactsWrap .item p{
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 18px;
+  margin: 0;
+  padding: 10px;
+  font-family: 'Open Sans';
+}
+
+
+.projectFactsWrap .item span{
+  width: 60px;
+  background: rgba(255, 255, 255, 0.8);
+  height: 2px;
+  display: block;
+  margin: 0 auto;
+}
+
+
+.projectFactsWrap .item i{
+  vertical-align: middle;
+  font-size: 50px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+
+.projectFactsWrap .item:hover i, .projectFactsWrap .item:hover p{
+  color: white;
+}
+
+.projectFactsWrap .item:hover span{
+  background: white;
+}
+
+@media (max-width: 786px){
+  .projectFactsWrap .item {
+     flex: 0 0 50%;
+  }
+}
+
+
+
+
+
+</style>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+</head>
+<body>
+<div class="sectiontitle">
+    <h2>Projects statistics</h2>
+    <span class="headerLine"></span>
+</div>
+<div id="projectFacts" class="sectionClass">
+    <div class="fullWidth eight columns">
+        <div class="projectFactsWrap ">
+            <div class="item wow fadeInUpBig animated animated" data-number="12" style="visibility: visible;">
+                <i class="fa fa-briefcase"></i>
+				
+                <p id="number1" class="number"><br>2000+</p>
+				<br>
+                <span></span>
+                <p>Projects done</p>
+            </div>
+            <div class="item wow fadeInUpBig animated animated" data-number="55" style="visibility: visible;">
+                <i class="fa fa-smile-o"></i>
+                <p id="number2" class="number"><br>5000+</p>
+				<br>
+                <span></span>
+                <p>Happy clients</p>
+            </div>
+            <div class="item wow fadeInUpBig animated animated" data-number="359" style="visibility: visible;">
+               <img src="assets/img/gallery/staf.png"  width="18.4%" >
+                <p id="number3" class="number"><br>30</p>
+				<br>
+                <span></span>
+                <p>Experienced Staff</p>
+            </div>
+            <div class="item wow fadeInUpBig animated animated" data-number="246" style="visibility: visible;">
+                <img src="assets/img/gallery/exp.png"  width="18%" >
+                <p id="number4" class="number"><br>30+</p>
+				<br>
+                <span></span>
+                <p>Years of Experience </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+
+	$.fn.jQuerySimpleCounter = function( options ) {
+	    var settings = $.extend({
+	        start:  0,
+	        end:    100,
+	        easing: 'swing',
+	        duration: 400,
+	        complete: ''
+	    }, options );
+
+	    var thisElement = $(this);
+
+	    $({count: settings.start}).animate({count: settings.end}, {
+			duration: settings.duration,
+			easing: settings.easing,
+			step: function() {
+				var mathCount = Math.ceil(this.count);
+				thisElement.text(mathCount);
+			},
+			complete: settings.complete
+		});
+	};
+
+
+$('#number1').jQuerySimpleCounter({end: 12,duration: 3000});
+$('#number2').jQuerySimpleCounter({end: 55,duration: 3000});
+$('#number3').jQuerySimpleCounter({end: 359,duration: 2000});
+$('#number4').jQuerySimpleCounter({end: 246,duration: 2500});
+
+
+
+  	
+  
+</script>
+
+</body>
+</html>
+
   
 		
         <!-- Our Services Start -->
